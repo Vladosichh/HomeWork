@@ -24,5 +24,6 @@ public class Homework02 {
         System.out.println(first+" "+ second);
 
 
+
     }
 }
