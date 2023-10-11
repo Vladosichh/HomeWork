@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Homework03 {
     public static void main(String[] args) {
         //#1
@@ -61,6 +62,29 @@ public class Homework03 {
         System.out.println();
 
         //#4
-        int m
+        System.out.println("Введите номер месяца");
+        Scanner scanner = new Scanner(System.in);
+        int monthNumber = scanner.nextInt();
+        System.out.println("Год является високосным?");
+        boolean isLeap = scanner.nextBoolean();
+        switch (monthNumber) {
+            case 1, 3, 5, 7, 8, 10, 12 -> System.out.println("В месяце 31 день");
+            case 4, 6, 9, 11 -> System.out.println("В месяце 30 дней ");
+            case 2 -> {
+                if (isLeap) System.out.println("В месяце 29 дней ");
+                else System.out.println("В месяце 28 дней ");
+            }
+        }
+        System.out.println();
+
+        //#5
+        int couponNumber = 3333;
+        double resultSum = 1000;
+        switch (couponNumber){
+            case 1111 -> System.out.println("Сумма со скидкой 10%: " + resultSum * 0.9);
+            case 3333 -> System.out.println("Сумма со скидкой 20%: " + resultSum * 0.8);
+            case 5555 -> System.out.println("Сумма со скидкой 30%: " + resultSum * 0.7);
+            default -> System.out.println("скидка не предусмотрена. Сумма : " + resultSum);
+        }
     }
 }
